@@ -42,9 +42,10 @@ int main()
 		break;
 	}
 	default:
-		cout << "podaj prawidlowy operator: " << endl;
+		cout << "podaj prawidlowy operator: " << endl; // komentarz
 		break;
 	}
 
+	
 	return 0;
 }
