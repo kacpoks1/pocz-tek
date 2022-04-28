@@ -41,8 +41,42 @@ int main()
 		cout << "wynik operacji " << op << ": " << wynik << endl;
 		break;
 	}
+	
+	case '-':
+	{
+		int wynik = 0;
+		for (int j = 0; j < i; j++)  // j to
+		{
+			wynik -= table[j];
+		}
+		cout << "wynik operacji " << op << ": " << wynik << endl;
+		break;
+	}
+	
+	case '*':
+	{
+		int wynik = 0;
+		for (int j = 0; j < i; j++)
+		{
+			wynik *= table[j];
+		}
+		cout << "wynik operacji " << op << ": " << wynik << endl;
+		break;
+	}
+
+	case '/':
+	{
+		int wynik = 0;
+		for (int j = 0; j < i; j++)
+		{
+			wynik /= table[j];
+		}
+		cout << "wynik operacji " << op << ": " << wynik << endl;
+		break;
+	}
+	
 	default:
-		cout << "podaj prawidlowy operator: " << endl; // komentarz
+		cout << "podaj prawidlowy operator: " << endl; // komen
 		break;
 	}
 
