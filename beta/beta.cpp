@@ -1,51 +1,57 @@
+
+
 #include <iostream>
-
 using namespace std;
-
 int main()
 {
-	const int table_size = 20;
-	int table[table_size];
-	char i;
-	int zmienna;
+	float a, b, x;
 	char op;
-
-	for (i = 0; i < table_size; i++)
-	{
-		cout << "Podaj " << i + 1 << " liczbe, aby przerwac podaj 0  " << endl;
-
-		cin >> zmienna;
-
-		if (zmienna == 0)
-		{
-			break;
-		}
-		else
-		{
-			table[i] = zmienna;
-		}
-	}
-
-	cout << "podaj operacje" << endl;
+	cout << "Podaj liczby: " << endl;
+	cin >> a >> b;
+	cout << "Podaj czynnosc: ";
 	cin >> op;
+
+
+
+
 
 	switch (op)
 	{
-	case '+':
-	{
-		int wynik = 0;
-		for (int j = 0; j < i; j++)
-		{
-			wynik += table[j];
-		}
-		cout << "wynik operacji " << op << ": " << wynik << endl;
-		break;
-	}
-	default:
-		cout << "podaj prawidlowy operator: " << endl; // komentarz
-		break;
-	}
 
-	
-	return 0;
+	case '+': {
+		x = a + b;
+		cout << x;
+	}
+			break;
+	case '-': {
+		x = a - b;
+		cout << x;
+	}
+			break;
+	case '*': {
+
+		x = a * b;
+		cout << x;
+	}
+			break;
+
+
+	case '/': {
+
+		if (a == 0 || b == 0) {
+
+			cout << "Nie dziel przez 0!";
+
+		}
+		else {
+			x = a / b;
+			cout << x;
+		}
+	}
+			break;
+	default:
+		cout << "podaj prawidlowy operator";
+
+		break;
+	}
 }
