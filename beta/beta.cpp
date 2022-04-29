@@ -44,10 +44,10 @@ int main()
 	
 	case '-':
 	{
-		int wynik = 0;
-		for (int j = 0; j < i; j++)  // j to
+		int wynik = table[0];
+		for (int j = 1; j < i; j++)  // j to ilosæ liczb w tablicy
 		{
-			wynik -= table[j];
+			wynik -= table[j++];
 		}
 		cout << "wynik operacji " << op << ": " << wynik << endl;
 		break;
@@ -55,7 +55,7 @@ int main()
 	
 	case '*':
 	{
-		int wynik = 0;
+		int wynik = table[1];
 		for (int j = 0; j < i; j++)
 		{
 			wynik *= table[j];
@@ -66,7 +66,7 @@ int main()
 
 	case '/':
 	{
-		int wynik = 0;
+		int wynik = table[1];
 		for (int j = 0; j < i; j++)
 		{
 			wynik /= table[j];
