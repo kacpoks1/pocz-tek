@@ -47,7 +47,7 @@ int main()
 		int wynik = table[0];
 		for (int j = 1; j < i; j++)  // j to ilosæ liczb w tablicy
 		{
-			wynik -= table[j++];
+			wynik -= table[j];
 		}
 		cout << "wynik operacji " << op << ": " << wynik << endl;
 		break;
@@ -55,10 +55,10 @@ int main()
 	
 	case '*':
 	{
-		int wynik = table[1];
+		int wynik = table[0];
 		for (int j = 1; j < i; j++)
 		{
-			wynik *= table[j++];
+			wynik *= table[j];
 		}
 		cout << "wynik operacji " << op << ": " << wynik << endl;
 		break;
@@ -69,14 +69,14 @@ int main()
 		int wynik = table[0];
 		for (int j = 1; j < i; j++)
 		{
-			wynik /= table[j++];
+			wynik /= table[j];
 		}
 		cout << "wynik operacji " << op << ": " << wynik << endl;
 		break;
 	}
 	
 	default:
-		cout << "podaj prawidlowy operator: " << endl; // komen
+		cout << "podaj prawidlowy operator " << endl; // komen
 		break;
 	}
 
