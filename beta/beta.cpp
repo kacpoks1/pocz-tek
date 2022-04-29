@@ -56,9 +56,9 @@ int main()
 	case '*':
 	{
 		int wynik = table[1];
-		for (int j = 0; j < i; j++)
+		for (int j = 1; j < i; j++)
 		{
-			wynik *= table[j];
+			wynik *= table[j++];
 		}
 		cout << "wynik operacji " << op << ": " << wynik << endl;
 		break;
@@ -66,10 +66,10 @@ int main()
 
 	case '/':
 	{
-		int wynik = table[1];
-		for (int j = 0; j < i; j++)
+		int wynik = table[0];
+		for (int j = 1; j < i; j++)
 		{
-			wynik /= table[j];
+			wynik /= table[j++];
 		}
 		cout << "wynik operacji " << op << ": " << wynik << endl;
 		break;
